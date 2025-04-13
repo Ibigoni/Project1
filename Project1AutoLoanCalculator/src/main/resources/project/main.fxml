@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="700.0" styleClass="border" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.2895812988281" minWidth="10.0" prefWidth="386.5581359863281" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.85415649414057" minWidth="10.0" prefWidth="311.4418640136718" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="246.40001220703124" minHeight="10.0" prefHeight="235.99998779296874" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="214.29343872070314" minHeight="10.0" prefHeight="206.44566040039064" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="146.60001220703123" minHeight="10.0" prefHeight="112.9543395996094" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="75.0" prefHeight="42.0" prefWidth="221.0">
+               <children>
+                  <Label text="Payment Information">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane prefHeight="238.0" prefWidth="388.0" styleClass="border">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.3999801635742" minWidth="10.0" prefWidth="154.65838317871095" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.74161682128909" minWidth="10.0" prefWidth="231.74161682128909" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="123.96363220214843" minHeight="10.0" prefHeight="73.6761260986328" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="93.92387390136717" minHeight="10.0" prefHeight="93.92387390136717" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="115.79999389648435" minHeight="10.0" prefHeight="69.60001220703126" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="85.0" prefWidth="217.0">
+                     <children>
+                        <Label text="Total Loan Amount: $ " />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label fx:id="ttlloanAmnt" text="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Monthly Payment: $" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="192.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label fx:id="monthlyPay" text="0.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="Total Payment: $" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label fx:id="ttlPay" text="0.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" layoutX="75.0" prefHeight="42.0" prefWidth="221.0">
+               <children>
+                  <Label text="Financing Information">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <GridPane layoutY="1.0" prefHeight="210.0" prefWidth="388.0" styleClass="border">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.3999801635742" minWidth="10.0" prefWidth="176.27614135742186" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="213.65536499023438" minWidth="10.0" prefWidth="210.92385864257812" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="94.55473022460937" minHeight="10.0" prefHeight="69.93361206054688" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="86.0" minHeight="10.0" prefHeight="78.86638793945312" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="72.21223144531251" minHeight="10.0" prefHeight="60.508221435546886" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="33.0" prefWidth="77.0" text="Base Price: $" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <TextField fx:id="bspriceTxt" prefHeight="30.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="62.0" prefWidth="219.0">
+                           <children>
+                              <Label prefHeight="33.0" prefWidth="80.0" text="Sales Tax: %" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="61.0" prefWidth="214.0">
+                           <children>
+                              <TextField fx:id="salestxTxt" prefHeight="30.0" prefWidth="160.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="Down Payment: $" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="dpayTxt" prefHeight="30.0" prefWidth="160.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="316.0" GridPane.columnIndex="1">
+         <children>
+            <HBox alignment="CENTER_LEFT" layoutX="35.0" prefHeight="41.0" prefWidth="110.0">
+               <children>
+                  <Label text="Loan Term">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_RIGHT" layoutX="34.0" layoutY="49.0" prefHeight="157.0" prefWidth="220.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <RadioButton fx:id="radioBtntwo" mnemonicParsing="false" text="24 Months" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <RadioButton fx:id="radioBtnthree" mnemonicParsing="false" prefHeight="203.0" prefWidth="181.0" text="36 Months" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="203.0" prefWidth="130.0">
+                     <children>
+                        <RadioButton fx:id="radioBtnfour" mnemonicParsing="false" prefHeight="248.0" prefWidth="142.0" text="48 Months" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT">
+                     <children>
+                        <RadioButton fx:id="radioBtnsixty" mnemonicParsing="false" prefHeight="88.0" prefWidth="124.0" text="60 Months" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="209.0" prefWidth="305.0" styleClass="border" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label layoutX="40.0" layoutY="13.0" text="Extra Options">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <VBox layoutX="39.0" layoutY="44.0" prefHeight="124.0" prefWidth="207.0">
+               <children>
+                  <CheckBox fx:id="sunrfChkBx" mnemonicParsing="false" text="Sun Roof: $1510" />
+                  <CheckBox fx:id="tchScreen" mnemonicParsing="false" prefHeight="128.0" prefWidth="156.0" text="Touch Screen: $470" />
+                  <CheckBox fx:id="rearCam" mnemonicParsing="false" prefHeight="28.0" prefWidth="141.0" text="Rear Camera: $340" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Button layoutX="235.0" layoutY="30.0" mnemonicParsing="false" onAction="#calculateBtn" prefHeight="35.0" prefWidth="77.0" text="Calculate" />
+            <Label fx:id="errorLbl" layoutX="164.0" layoutY="81.0" prefHeight="20.0" prefWidth="388.0" textAlignment="CENTER" textFill="#f21515" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button layoutX="-17.0" layoutY="31.0" mnemonicParsing="false" onAction="#resetBtn" prefHeight="35.0" prefWidth="65.0" text="Reset" />
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
